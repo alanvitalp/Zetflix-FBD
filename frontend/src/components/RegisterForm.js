@@ -21,15 +21,25 @@ export default function Register() {
           <div className={styles.userContainer}>
             <label>
               Usuário
-            <input type="text" />
+            <input type="text" placeholder="Digite seu usuário" />
             </label>
           </div>
 
           <div className={styles.passwordContainer}>
             <label>
-              Senha
-            <input type="text" />
+              E-mail
+            <input type="text" placeholder="Digite seu e-mail" />
             </label>
+          </div>
+
+          <div className={styles.checkContainer}>
+            <input type="radio" value="user" name="userType" />
+            <label>user</label>
+          </div>
+
+          <div className={styles.checkContainer}>
+            <input type="radio" value="admin" name="userType" />
+            <label>admin</label>
           </div>
 
           <a href="/">Entrar na sua conta</a>

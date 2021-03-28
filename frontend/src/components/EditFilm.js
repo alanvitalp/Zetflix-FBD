@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 
-const EditSerie = ({ serie }) => {
-  const [id, setID] = useState(serie.s_id);
-  const [title, setTitle] = useState(serie.s_title);
-  const [description, setDescription] = useState(serie.s_sinopse);
-  const [seasonAmount, setSeasonAmount] = useState(serie.s_season_amount);
+const EditSerie = ({ film }) => {
+  const [id, setID] = useState(film.f_id);
+  const [title, setTitle] = useState(film.f_title);
+  const [release, setRelease] = useState(film.f_rday);
+  const [description, setDescription] = useState(film.f_sinopse);
+  const [length, setLength] = useState(film.f_length);
 
 
-  const updateSerie = async (id) => {
+  const updateFilm = async (id) => {
     // e.preventDefault();
     try {
-      const body = { id, title, description, seasonAmount }
-      const response = await fetch(`http://localhost:5000/series/${id}`, {
+      const body = { id, title, description, release, length }
+      const response = await fetch(`http://localhost:5000/films/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
@@ -30,12 +31,12 @@ const EditSerie = ({ serie }) => {
       <button type="button"
         className="btn btn-primary"
         data-toggle="modal"
-        data-target={`#id${serie.s_id}`}
+        data-target={`#id${film.f_id}`}
       >
-        Edit Serie
+        Edit Film
 
       </button>
-      <div className="modal" id={`id${serie.s_id}`}>
+      <div className="modal" id={`id${film.f_id}`}>
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -53,19 +54,23 @@ const EditSerie = ({ serie }) => {
                 onChange={(e) => setTitle(e.target.value)} />
               <input type="text"
                 className="form-control"
+                value={title}
+                onChange={(e) => setRelease(e.target.value)} />
+              <input type="text"
+                className="form-control"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)} />
               <input type="text"
                 className="form-control"
-                value={seasonAmount}
-                onChange={(e) => setSeasonAmount(e.target.value)} />
+                value={length}
+                onChange={(e) => setLength(e.target.value)} />
             </div>
             <div className="modal-footer">
               <button
                 type="button"
                 className="btn btn-primary"
                 data-dismiss="modal"
-                onClick={() => updateSerie(serie.s_id)}
+                onClick={() => updateFilm(film.f_id)}
               >
                 Editar</button>
               <button

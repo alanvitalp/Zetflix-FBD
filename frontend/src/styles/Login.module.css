@@ -45,9 +45,22 @@
   font-size: 1.2rem;
 }
 
-.passwordContainer {
+.emailContainer {
   margin: 10px 0 10px 0;
   font-size: 1.2rem;
 }
 
+.checkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+.checkContainer label {
+  margin: 0;
+}
+
+.checkContainer input{
+  width: 15px;
+  height: 15px;
+}

@@ -22,14 +22,14 @@ export default function Login() {
           <div className={styles.userContainer}>
             <label>
               Usuário
-            <input type="text" placeholder="Digite seu e-mail" />
+            <input type="text" placeholder="Digite seu usuário" />
             </label>
           </div>
 
-          <div className={styles.passwordContainer}>
+          <div className={styles.emailContainer}>
             <label>
-              Senha
-            <input type="text" placeholder="Digite sua senha" />
+              E-mail
+            <input type="text" placeholder="Digite seu e-mail" />
             </label>
           </div>
 

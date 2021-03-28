@@ -6,13 +6,10 @@ import EditSerie from './EditSerie';
 const ListSeries = () => {
   const [series, setSeries] = useState([]);
 
-
-
-
   const deleteSerie = async (id) => {
     try {
       const deleteSerie = await fetch(`http://localhost:5000/series/${id}`, {
-        method: "DELETE",
+        method: "DELETE"
       });
 
       setSeries(series.filter(serie => serie.s_id !== id));
@@ -38,8 +35,6 @@ const ListSeries = () => {
     getSeries();
   }, []);
 
-
-
   return (
     <div>
       <h1 className="text-center mt-5">List Series</h1>
@@ -60,7 +55,13 @@ const ListSeries = () => {
               <td>{series.s_sinopse}</td>
               <td>{series.s_season_amount}</td>
               <td><EditSerie serie={series} /></td>
-              <td><button className="btn btn-danger" onClick={() => deleteSerie(series.s_id)}>Delete</button></td>
+              <td>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => deleteSerie(series.s_id)}
+                >
+                  Delete
+                </button></td>
             </tr>
           ))}
         </tbody>
