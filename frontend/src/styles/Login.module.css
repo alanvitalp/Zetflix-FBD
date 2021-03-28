@@ -1,0 +1,53 @@
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.loginContainer a {
+  display: flex;
+  justify-content: flex-end;
+  margin: -5px 0 5px 0; 
+  color: #0071eb;
+}
+
+
+.loginContainer h1 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.loginContainer h2 {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.loginContainer label {
+  display: block;
+  color: #fff;
+}
+
+.loginContainer input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.userContainer {
+  margin: 30px 0 0 0;
+  font-size: 1.2rem;
+}
+
+.passwordContainer {
+  margin: 10px 0 10px 0;
+  font-size: 1.2rem;
+}
+
+
