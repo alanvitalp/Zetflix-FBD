@@ -1,8 +1,8 @@
 # 1 - BACK-END
 
-## NPM RUN START
+## npm run start
 
 
 # 2 - FRONT-END
 
-## YARN START
+## yarn start
