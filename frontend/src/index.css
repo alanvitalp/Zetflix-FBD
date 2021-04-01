@@ -10,7 +10,7 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 80px auto;
+  margin: 150px auto;
   overflow: auto;
   min-height: 500px;
   padding: 30px;
@@ -44,4 +44,12 @@ body {
 .bttn-block {
   display: block;
   width: 100%;
+}
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import ListFilms from './ListFilms';
+import ListFilms from '../pages/ListFilms';
 
 const Films = () => {
   const [id, setID] = useState(0);

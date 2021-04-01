@@ -5,12 +5,16 @@ const EditSerie = ({ serie }) => {
   const [title, setTitle] = useState(serie.s_title);
   const [description, setDescription] = useState(serie.s_sinopse);
   const [seasonAmount, setSeasonAmount] = useState(serie.s_season_amount);
+  const [director, setDirector] = useState(serie.d_id);
+  const [producer, setProducer] = useState(serie.p_id);
+  const [category, setCategory] = useState(serie.c_id);
+
 
 
   const updateSerie = async (id) => {
     // e.preventDefault();
     try {
-      const body = { id, title, description, seasonAmount }
+      const body = { id, title, description, seasonAmount, director, producer, category }
       const response = await fetch(`http://localhost:5000/series/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -59,6 +63,18 @@ const EditSerie = ({ serie }) => {
                 className="form-control"
                 value={seasonAmount}
                 onChange={(e) => setSeasonAmount(e.target.value)} />
+              <input type="text"
+                className="form-control"
+                value={producer}
+                onChange={(e) => setProducer(e.target.value)} />
+              <input type="text"
+                className="form-control"
+                value={director}
+                onChange={(e) => setDirector(e.target.value)} />
+              <input type="text"
+                className="form-control"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)} />
             </div>
             <div className="modal-footer">
               <button

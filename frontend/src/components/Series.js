@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import ListSeries from './ListSeries';
+import ListSeries from '../pages/ListSeries';
 
 const Series = () => {
   const [id, setID] = useState(0);
